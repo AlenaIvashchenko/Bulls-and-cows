@@ -18,7 +18,7 @@ int main() {
         int inputNum = 0;
         printf(" Write your number: "); scanf("%d", &inputNum);
 
-        // Если игрок победил
+ 
         if (checkBeasts(compNum, inputNum, step)) {
             printf(" Want to play more? (Y/N): ");
             char key = getch();
