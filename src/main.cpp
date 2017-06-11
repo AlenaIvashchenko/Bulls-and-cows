@@ -1,9 +1,17 @@
 #include <ctime>
 #include <stdlib.h>
 #include <stdio.h>
-#include "conio.h"
 #include "logic.h"
 #include "display.h"
+
+
+#ifdef _WIN32
+    #include "conio.h"
+#else
+    char getch() {
+        return 0;
+    }
+#endif
 
 int main() {
     srand(time(NULL));
