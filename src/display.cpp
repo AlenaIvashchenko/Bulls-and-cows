@@ -6,8 +6,8 @@
 void clearScreen() {
     system("CLS");
     printf("\
- Число должно быть положительным,четырехзначным,не имееть \n\
- повторений, а также не должно начинаться с нуля        \n\
+ The number must be positive, four-digit, do not have \n\
+ duplicate digits, and do not start from zero.        \n\
  -----------------------------------------------------\n\n");
 }
 
@@ -17,9 +17,9 @@ void printNumber(const int number[]) {
 }
 
 void printBeasts(const int bulls, const int cows, const int step) {
-    printf(" Быки: %d", bulls);
-    if (bulls == 4) printf("   Вы выиграли!!!");
-    else printf(" Коровы: %d", cows);
-    printf(" Шаг: %d", step);
+    printf(" Bulls: %d", bulls);
+    if (bulls == 4) printf("   You won!!!");
+    else printf(" Cows: %d", cows);
+    printf(" Step: %d", step);
     printf("\n\n");
 }
