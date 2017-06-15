@@ -43,4 +43,12 @@ int countBulls(const int compNum[], const int playerNum[]) {
     }
     return bulls;
 }
+int countCows(const int compNum[], const int playerNum[]) {
+    int beasts = 0;
+    for (int i = 0; i < 4; i++)
+        for (int j = 0; j < 4; j++)
+            if (compNum[i] == playerNum[j]) beasts++;
+    int cows = beasts - countBulls(compNum, playerNum);
+    return cows;
+}
 
