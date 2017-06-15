@@ -51,4 +51,16 @@ int countCows(const int compNum[], const int playerNum[]) {
     int cows = beasts - countBulls(compNum, playerNum);
     return cows;
 }
+bool checkBeasts(const int compNum[], const int inputNum, int &step) {
+    int playerNum[4];
+    if (convertNumber(inputNum, playerNum)) {
+        step++;
+        int bulls = countBulls(compNum, playerNum);
+        int cows = countCows(compNum, playerNum);
+        printBeasts(bulls, cows, step);
+        if (bulls == 4) return true;
+    }
+    else printf(" INVALID NUMBER \n\n");
+    return false;
+}
 
