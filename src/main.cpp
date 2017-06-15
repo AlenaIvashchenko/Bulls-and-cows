@@ -24,11 +24,11 @@ int main() {
     bool exitFlag = false;
     while (exitFlag != true) {
         int inputNum = 0;
-        printf(" Write your number: "); scanf("%d", &inputNum);
+        printf(" Введите четырехзначное число: "); scanf("%d", &inputNum);
 
  
         if (checkBeasts(compNum, inputNum, step)) {
-            printf(" Want to play more? (Y/N): ");
+            printf(" Продолжить игру? (Y/N): ");
             char key = getch();
             switch (key) {
                 case 'Y': case 'y':
