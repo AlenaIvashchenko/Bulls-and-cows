@@ -7,4 +7,4 @@ int countBulls(const int compNum[], const int playerNum[]);
 int countCows(const int compNum[], const int playerNum[]);
 bool checkBeasts(const int compNum[], const int inputNum, int &step);
 
-#endif // LOGIC_H
+#endif 
