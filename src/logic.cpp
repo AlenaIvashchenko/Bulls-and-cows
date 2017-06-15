@@ -60,7 +60,7 @@ bool checkBeasts(const int compNum[], const int inputNum, int &step) {
         printBeasts(bulls, cows, step);
         if (bulls == 4) return true;
     }
-    else printf(" INVALID NUMBER \n\n");
+    else printf(" НЕДОПУСТИМОЕ ЧИСЛО \n\n");
     return false;
 }
 
