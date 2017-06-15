@@ -17,4 +17,21 @@ void makeNumber(int number[]) {
         spentNum[number[i]] = true;
     }
 }
+bool convertNumber(int number, int convNum[]) {
 
+    // Проверка на количество символов
+    if (number < 1000 || number > 9999) return false;
+
+    // Преобразование числа в массив цифр
+    for (int i = 3; i >= 0; i--) {
+        convNum[i] = number % 10;
+        number /= 10;
+    }
+
+    // Проверка на повторяющиеся цифры
+    for (int i = 0; i < 4; i++)
+        for (int j = i + 1; j < 4; j++)
+            if (convNum[i] == convNum[j])
+                return false;
+    return true;
+}
