@@ -35,3 +35,12 @@ bool convertNumber(int number, int convNum[]) {
                 return false;
     return true;
 }
+
+int countBulls(const int compNum[], const int playerNum[]) {
+    int bulls = 0;
+    for (int i = 0; i < 4; i++) {
+        if (compNum[i] == playerNum[i]) bulls++;
+    }
+    return bulls;
+}
+
