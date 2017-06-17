@@ -16,3 +16,21 @@ CTEST(logic_suite, making_number) {
     ASSERT_FALSE(similarNum);
 }
 
+CTEST(logic_suite, converting_number) {
+    int number = 1234;
+    int convNum[4] = {};
+    convertNumber(number, convNum);
+    int expNum[4] = {1, 2, 3, 4};
+    ASSERT_DATA((unsigned char*)expNum, 4,
+                (unsigned char*)convNum, 4);
+
+    number = 1122;
+    ASSERT_FALSE(convertNumber(number, convNum));
+    number = 123;
+    ASSERT_FALSE(convertNumber(number, convNum));
+    number = 12345;
+    ASSERT_FALSE(convertNumber(number, convNum));
+    number = 0123;
+    ASSERT_FALSE(convertNumber(number, convNum));
+}
+
