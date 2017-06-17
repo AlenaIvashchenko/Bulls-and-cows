@@ -70,3 +70,19 @@ CTEST(logic_suite, cows_counting) {
     ASSERT_EQUAL(4, countCows(compNum, playerNum));
 }
 
+CTEST(logic_suite, beasts_checking) {
+    int compNum[4] = {1, 2, 3, 4};
+
+    int step = 0;
+    int inputNum = 4321;
+    ASSERT_FALSE(checkBeasts(compNum, inputNum, step));
+    ASSERT_EQUAL(1, step);
+
+    inputNum = 0000; step = 0;
+    ASSERT_FALSE(checkBeasts(compNum, inputNum, step));
+    ASSERT_EQUAL(0, step);
+
+    inputNum = 1234; step = 0;
+    ASSERT_TRUE(checkBeasts(compNum, inputNum, step));
+    ASSERT_EQUAL(1, step);
+}
