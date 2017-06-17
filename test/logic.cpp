@@ -34,3 +34,39 @@ CTEST(logic_suite, converting_number) {
     ASSERT_FALSE(convertNumber(number, convNum));
 }
 
+CTEST(logic_suite, bulls_counting) {
+    int compNum[4]   = {1, 2, 3, 4};
+    int playerNum[4] = {1, 2, 4, 3};
+    ASSERT_EQUAL(2, countBulls(compNum, playerNum));
+
+    playerNum[0] = 5;
+    playerNum[1] = 6;
+    playerNum[2] = 7;
+    playerNum[3] = 8;
+    ASSERT_EQUAL(0, countBulls(compNum, playerNum));
+
+    playerNum[0] = compNum[0];
+    playerNum[1] = compNum[1];
+    playerNum[2] = compNum[2];
+    playerNum[3] = compNum[3];
+    ASSERT_EQUAL(4, countBulls(compNum, playerNum));
+}
+
+CTEST(logic_suite, cows_counting) {
+    int compNum[4]   = {1, 2, 3, 4};
+    int playerNum[4] = {3, 0, 1, 5};
+    ASSERT_EQUAL(2, countCows(compNum, playerNum));
+
+    playerNum[0] = 5;
+    playerNum[1] = 6;
+    playerNum[2] = 7;
+    playerNum[3] = 8;
+    ASSERT_EQUAL(0, countCows(compNum, playerNum));
+
+    playerNum[0] = compNum[3];
+    playerNum[1] = compNum[2];
+    playerNum[2] = compNum[1];
+    playerNum[3] = compNum[0];
+    ASSERT_EQUAL(4, countCows(compNum, playerNum));
+}
+
