@@ -1,5 +1,8 @@
-CF := -std=c++14 -Wall -Werror -Isrc -Ithirdparty
-
+ifeq ($(shell uname -o), GNU/Linux)
+    CF := -std=c++14 -Wall -Werror -Isrc -Ithirdparty/include_linux
+else
+    CF := -std=c++14 -Wall -Werror -Isrc -Ithirdparty/include
+endif
 CF_TEST := $(CF)
 
 OBJ_DIR := build/src
