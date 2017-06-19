@@ -20,6 +20,6 @@ void printBeasts(const int bulls, const int cows, const int step) {
     printf(" Быки: %d", bulls);
     if (bulls == 4) printf("   Вы выиграли!!!");
     else printf(" Коровы: %d", cows);
-    printf(" Шаг: %d", step);
+    printf(" Ход: %d", step);
     printf("\n\n");
 }
